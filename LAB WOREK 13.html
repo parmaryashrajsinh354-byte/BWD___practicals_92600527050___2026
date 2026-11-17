@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sem-1 Result Comparison</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+  <!-- 1. CONTAINER: Centers content and adds responsive margins -->
+  <div class="container">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-primary">Semester 1 Result Comparison</h2>
+      <p class="text-muted">Comparing Mid-Sem Internal Marks vs. Final Sem-1 Exam Marks</p>
+    </div>
+
+    <!-- 2. ROW: Holds our 12-column grid layout -->
+    <div class="row g-4">
+      
+      <!-- Column 1 (6 of 12 cols = 50% width on desktop, 100% on mobile) -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100 border-0">
+          <div class="card-header bg-secondary text-white fw-semibold">
+            Mid-Sem Internal Assessment
+          </div>
+          <div class="card-body">
+            <table class="table table-striped mb-0">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Marks (Out of 100)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Web Design (HTML/CSS)</td>
+                  <td>72</td>
+                </tr>
+                <tr>
+                  <td>Programming in C</td>
+                  <td>68</td>
+                </tr>
+                <tr>
+                  <td>Mathematics - I</td>
+                  <td>75</td>
+                </tr>
+              </tbody>
+              <tfoot class="table-light fw-bold">
+                <tr>
+                  <td>Average Percentage</td>
+                  <td>71.6%</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 (6 of 12 cols = 50% width on desktop, 100% on mobile) -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100 border-primary">
+          <div class="card-header bg-primary text-white fw-semibold">
+            Final Sem-1 University Result
+          </div>
+          <div class="card-body">
+            <table class="table table-striped mb-0">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Marks (Out of 100)</th>
+                  <th>Difference</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Web Design (HTML/CSS)</td>
+                  <td>88</td>
+                  <td><span class="badge bg-success">+16</span></td>
+                </tr>
+                <tr>
+                  <td>Programming in C</td>
+                  <td>79</td>
+                  <td><span class="badge bg-success">+11</span></td>
+                </tr>
+                <tr>
+                  <td>Mathematics - I</td>
+                  <td>82</td>
+                  <td><span class="badge bg-success">+7</span></td>
+                </tr>
+              </tbody>
+              <tfoot class="table-primary fw-bold">
+                <tr>
+                  <td>Final Percentage</td>
+                  <td>83.0%</td>
+                  <td><span class="badge bg-success">+11.4%</span></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End Row -->
+
+    <!-- Full-Width Summary Row (12 of 12 cols) -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="alert alert-success d-flex justify-content-between align-items-center mb-0">
+          <span><strong>Result Status:</strong> Passed with Distinction (Overall improvement of +34 marks)</span>
+          <span class="badge bg-dark fs-6">SPI: 8.50</span>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End Container -->
+
+</body>
+</html>

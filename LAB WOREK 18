@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>External JavaScript Alert Demo</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f1f5f9;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #2563eb;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button that triggers the JavaScript action -->
+  <button id="nameBtn">Show My Name</button>
+
+  <!-- Link to External JavaScript File -->
+  <script src="script.js"></script>
+
+</body>
+</html>

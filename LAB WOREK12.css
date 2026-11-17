@@ -1,0 +1,36 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f1f5f9;
+  padding: 40px 20px;
+  color: #1e293b;
+}
+
+.article-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: auto; /* Clearfix: prevents container collapse around floated image */
+}
+
+.float-img {
+  float: left;               /* Floats image left (change to 'right' to flip sides) */
+  width: 240px;
+  height: auto;
+  margin-right: 20px;        /* Space between image and wrapped text */
+  margin-bottom: 12px;       /* Space below image */
+  border-radius: 8px;
+}
+
+.article-box h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.article-box p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}

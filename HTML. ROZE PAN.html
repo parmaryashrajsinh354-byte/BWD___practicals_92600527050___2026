@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rose Pan Design</title>
+  <style>
+    :root {
+      --rose-bg: #fff5f7;
+      --rose-light: #ffe4e6;
+      --rose-mid: #fda4af;
+      --rose-primary: #e11d48;
+      --rose-dark: #881337;
+      --text-main: #3f1d28;
+      --text-muted: #7f4959;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--rose-bg) 0%, var(--rose-light) 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Main Rose Panel */
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--rose-mid);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(225, 29, 72, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .hero-panel h1 {
+      color: var(--rose-dark);
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-panel p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-rose {
+      display: inline-block;
+      background: var(--rose-primary);
+      color: #ffffff;
+      padding: 0.8rem 1.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+
+    .btn-rose:hover {
+      background: var(--rose-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Multi-Panel Grid */
+    .panel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card-panel {
+      background: #ffffff;
+      border-top: 5px solid var(--rose-primary);
+      border-radius: 14px;
+      padding: 1.75rem;
+      box-shadow: 0 8px 20px rgba(136, 19, 55, 0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card-panel:hover {
+      transform: translateY(-4px);
+    }
+
+    .card-panel h2 {
+      color: var(--rose-dark);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-panel p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero-panel">
+      <h1>Rose Theme Panel</h1>
+      <p>
+        A clean, responsive HTML and CSS panel layout styled with soft blush tones and deep rose accents.
+      </p>
+      <a href="#explore" class="btn-rose">Explore Design</a>
+    </section>
+
+    <section class="panel-grid" id="explore">
+      <div class="card-panel">
+        <h2>Elegant Palette</h2>
+        <p>Uses warm blush backgrounds paired with high-contrast crimson text for easy reading.</p>
+      </div>
+      <div class="card-panel">
+        <h2>Responsive Grid</h2>
+        <p>Automatically adjusts panel columns to fit desktop, tablet, and mobile screens.</p>
+      </div>
+      <div class="card-panel">
+        <h2>Interactive Hover</h2>
+        <p>Subtle lift animations and button transitions give the layout a modern, polished feel.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

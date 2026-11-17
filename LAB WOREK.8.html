@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SocialPulse — Unified Social Feed</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#" class="logo">Social<span>Pulse</span></a>
+        <div class="search-box">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" placeholder="Search posts, people, or #tags..." />
+        </div>
+      </div>
+
+      <nav class="nav-center">
+        <a href="#" class="nav-link active" title="Home">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </a>
+        <a href="#" class="nav-link" title="Network">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </a>
+        <a href="#" class="nav-link" title="Explore">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </a>
+        <a href="#" class="nav-link" title="Notifications">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </a>
+      </nav>
+
+      <div class="nav-right">
+        <img src="https://unsplash.com" alt="Profile" class="avatar-sm" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Main 3-Column Layout -->
+  <main class="main-grid">
+
+    <!-- Left Sidebar (LinkedIn / Facebook Style Profile & Shortcuts) -->
+    <aside class="sidebar-left">
+      <div class="card profile-card">
+        <div class="profile-banner"></div>
+        <div class="profile-info">
+          <img src="https://unsplash.com" alt="Aarav Patel" class="avatar-lg" />
+          <h3>Aarav Patel</h3>
+          <p class="handle">@aarav.builds · Product Designer</p>
+        </div>
+        <div class="profile-stats">
+          <div>
+            <strong>1,420</strong>
+            <span>Connections</span>
+          </div>
+          <div>
+            <strong>8,940</strong>
+            <span>Followers</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card menu-card">
+        <a href="#" class="menu-item active">🏠 Home Feed</a>
+        <a href="#" class="menu-item">🔖 Saved Posts</a>
+        <a href="#" class="menu-item">👥 Communities</a>
+        <a href="#" class="menu-item">📊 Creator Analytics</a>
+        <a href="#" class="menu-item">⚙️ Preferences</a>
+      </div>
+    </aside>
+
+    <!-- Center Feed -->
+    <section class="feed-column">
+
+      <!-- Instagram-Style Stories Bar -->
+      <div class="card stories-bar">
+        <div class="story-item add-story">
+          <div class="story-ring">
+            <img src="https://unsplash.com" alt="Your Story" />
+            <span class="plus-badge">+</span>
+          </div>
+          <span>Your Story</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring unread">
+            <img src="https://unsplash.com" alt="Rohan" />
+          </div>
+          <span>rohan.dev</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring unread">
+            <img src="https://unsplash.com" alt="Meera" />
+          </div>
+          <span>meera_ux</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring unread">
+            <img src="https://unsplash.com" alt="Kabir" />
+          </div>
+          <span>kabir.ai</span>
+        </div>
+        <div class="story-item">
+          <div class="story-ring">
+            <img src="https://unsplash.com" alt="Ananya" />
+          </div>
+          <span>ananya.art</span>
+        </div>
+      </div>
+
+      <!-- Facebook / LinkedIn Style Create Post Box -->
+      <div class="card composer-card">
+        <div class="composer-top">
+          <img src="https://unsplash.com" alt="User" class="avatar-md" />
+          <input type="text" placeholder="Share an update, photo, or insight..." />
+        </div>
+        <div class="composer-actions">
+          <button type="button" class="action-chip">🖼️ Photo / Video</button>
+          <button type="button" class="action-chip">📊 Poll</button>
+          <button type="button" class="action-chip">📝 Article</button>
+          <button type="button" class="btn-primary">Post</button>
+        </div>
+      </div>
+
+      <!-- Feed Filter Tabs -->
+      <div class="feed-tabs">
+        <button class="tab active">For You</button>
+        <button class="tab">Following</button>
+        <button class="tab">Media</button>
+        <button class="tab">Professional</button>
+      </div>
+
+      <!-- Post 1: Visual Photo Post (Instagram / Facebook Style) -->
+      <article class="card post-card">
+        <div class="post-header">
+          <div class="post-author">
+            <img src="https://unsplash.com" alt="Meera" class="avatar-md" />
+            <div>
+              <div class="author-row">
+                <h4>Meera Joshi</h4>
+                <span class="badge-verified">✓</span>
+                <span class="handle">@meera_ux · 2h</span>
+              </div>
+              <p class="subtitle">Design Systems Lead · Bengaluru</p>
+            </div>
+          </div>
+          <button class="icon-btn" aria-label="More options">•••</button>
+        </div>
+
+        <p class="post-text">
+          Early morning workspace setup before kicking off our Q4 design sprint. Clean typography and natural light make all the difference! ✨🎨 <a href="#">#DesignSystems</a> <a href="#">#Workspace</a>
+        </p>
+
+        <div class="post-media">
+          <img src="https://unsplash.com" alt="Minimalist desk setup" />
+        </div>
+
+        <div class="post-stats">
+          <span>❤️ 428 Likes</span>
+          <span>36 Comments · 14 Reposts</span>
+        </div>
+
+        <div class="post-footer">
+          <button class="footer-btn">🤍 Like</button>
+          <button class="footer-btn">💬 Comment</button>
+          <button class="footer-btn">🔁 Repost</button>
+          <button class="footer-btn">📤 Share</button>
+        </div>
+      </article>
+
+      <!-- Post 2: Microblog / Professional Insight Post (X / LinkedIn Style) -->
+      <article class="card post-card">
+        <div class="post-header">
+          <div class="post-author">
+            <img src="https://unsplash.com" alt="Rohan" class="avatar-md" />
+            <div>
+              <div class="author-row">
+                <h4>Rohan Verma</h4>
+                <span class="handle">@rohan_dev · 5h</span>
+              </div>
+              <p class="subtitle">Staff Frontend Engineer</p>
+            </div>
+          </div>
+          <button class="icon-btn" aria-label="More options">•••</button>
+        </div>
+
+        <p class="post-text">
+          Hot take on modern CSS: You don't need heavy JavaScript libraries for responsive layouts anymore.
+          <br><br>
+          Combining <strong>CSS Grid</strong>, <strong>Container Queries</strong>, and native <strong>CSS Custom Properties</strong> cuts bundle size by 40% while keeping 60fps scroll performance across mobile and desktop. 🚀
+        </p>
+
+        <div class="post-stats">
+          <span>❤️ 1,105 Likes</span>
+          <span>92 Comments · 214 Reposts</span>
+        </div>
+
+        <div class="post-footer">
+          <button class="footer-btn">🤍 Like</button>
+          <button class="footer-btn">💬 Comment</button>
+          <button class="footer-btn">🔁 Repost</button>
+          <button class="footer-btn">📤 Share</button>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Right Sidebar (X Trends & LinkedIn Suggestions) -->
+    <aside class="sidebar-right">
+      <div class="card widget-card">
+        <h3>Trending Now</h3>
+        <ul class="trend-list">
+          <li>
+            <span class="trend-cat">Technology · Trending</span>
+            <strong>#CSSGrid2026</strong>
+            <span class="trend-count">18.4K posts</span>
+          </li>
+          <li>
+            <span class="trend-cat">Design · Live</span>
+            <strong>Minimalist UI Kits</strong>
+            <span class="trend-count">9,210 posts</span>
+          </li>
+          <li>
+            <span class="trend-cat">Startups · India</span>
+            <strong>SaaS Builders Meetup</strong>
+            <span class="trend-count">5,430 posts</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card widget-card">
+        <h3>Suggested for You</h3>
+        <div class="follow-item">

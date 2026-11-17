@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Donor Registration</title>
+    <style>
+        :root {
+            --primary-red: #d32f2f;
+            --primary-hover: #b71c1c;
+            --bg-light: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --border-color: #ced4da;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 20px auto;
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        form {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 1.15rem;
+            color: var(--primary-red);
+            border-bottom: 2px solid #f1f1f1;
+            padding-bottom: 8px;
+            margin: 25px 0 15px 0;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+
+        input, select, textarea {
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .blood-group-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .blood-option {
+            position: relative;
+        }
+
+        .blood-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .blood-option label {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .blood-option input[type="radio"]:checked + label {
+            background-color: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 4px;
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary-red);
+        }
+
+        .checkbox-group label {
+            font-weight: normal;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-hover);
+        }
+
+        @media (max-width: 600px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .blood-group-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🩸 Blood Donor Registration</h1>
+        <p>Join our life-saving community. Fill out the form below to register as a donor.</p>
+    </div>
+
+    <form action="#" method="POST">
+        <!-- Personal Information -->
+        <h2 class="section-title">Personal Information</h2>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g., Aarav Patel" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (in kg) *</label>
+                <input type="number" id="weight" name="weight" min="45" placeholder="Min. 45 kg" required>
+            </div>
+        </div>
+
+        <!-- Blood Group Selection -->
+        <h2 class="section-title">Blood Details</h2>
+        <div class="form-group">
+            <label>Select Your Blood Group *</label>
+            <div class="blood-group-grid">
+                <div class="blood-option">
+                    <input type="radio" id="aPos" name="bloodGroup" value="A+" required>
+                    <label for="aPos">A+</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="aNeg" name="bloodGroup" value="A-">
+                    <label for="aNeg">A-</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="bPos" name="bloodGroup" value="B+">
+                    <label for="bPos">B+</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="bNeg" name="bloodGroup" value="B-">
+                    <label for="bNeg">B-</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="oPos" name="bloodGroup" value="O+">
+                    <label for="oPos">O+</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="oNeg" name="bloodGroup" value="O-">
+                    <label for="oNeg">O-</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="abPos" name="bloodGroup" value="AB+">
+                    <label for="abPos">AB+</label>
+                </div>
+                <div class="blood-option">
+                    <input type="radio" id="abNeg" name="bloodGroup" value="AB-">
+                    <label for="abNeg">AB-</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="lastDonation">Last Donation Date (if applicable)</label>
+                <input type="date" id="lastDonation" name="lastDonation">
+            </div>
+            <div class="form-group">
+                <label for="availability">Emergency Availability *</label>
+                <select id="availability" name="availability" required>
+                    <option value="anytime">Anytime (24/7 Emergency)</option>
+                    <option value="weekends">Weekends Only</option>
+                    <option value="scheduled">Scheduled Drives Only</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Contact Details -->
+        <h2 class="section-title">Contact & Location</h2>
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" placeholder="e.g., Rajkot" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">PIN Code *</label>
+                <input type="text" id="pincode" name="pincode" placeholder="e.g., 360001" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="address">Street Address</label>
+                <textarea id="address" name="address" rows="2" placeholder="Enter your full residential address"></textarea>
+            </div>
+        </div>
+
+        <!-- Health Declaration -->
+        <h2 class="section-title">Health & Consent</h2>
